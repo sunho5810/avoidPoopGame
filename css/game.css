@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+img{vertical-align: top;}
+
+.game_map{
+    width: 400px;
+    height: 700px;
+    background: #d1d1d1;
+    margin: 100px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.game_start_bt,
+.game_ending .game_over .restart
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 40%;
+    left: 50%;
+    width: 200px;
+    height: 50px;
+    font-size: 32px;
+    color: #fff;
+    background: green;
+    transform: translate(-50%);
+}
+
+.game_ending .game_over .restart{top: 200%;}
+
+
+.game_ending{
+    position: absolute;
+    display: none;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.game_ending .game_over,
+.game_ending .game_clear{
+    position: absolute;
+    z-index: 30;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    width: 210px;    
+}
+
+.game_ending .game_over{color: red;}
+.game_ending .game_clear{color: blue;}
+
+
+.hero{
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    background: green;
+    position: absolute;
+    bottom: 20px;
+}
+
+.enemy{
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    left: 0%;
+    background: red;
+    opacity: 0.5;
+}
+
